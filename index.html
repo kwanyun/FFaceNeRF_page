@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html> 
+<head>  
+  <meta charset="utf-8">
+  <meta name="description" content="FFaceNeRF: Few-shot Face Editing in Neural Radiance Fields.">
+  <meta property="og:title" content="FFaceNeRF: Few-shot Face Editing in Neural Radiance Fields"/>
+  <meta property="og:description" content="description"/>
+  <meta property="og:url" content=""/>
+  <meta property="og:image" content="static/image/" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="FFaceNeRF: Few-shot Face Editing in Neural Radiance Fields">
+  <meta name="twitter:description" content="description">
+  <meta name="twitter:image" content="static/images/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="keywords">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>FFaceNeRF: Few-shot Face Editing in Neural Radiance Fields</title> 
+  <link rel="icon" type="image/x-icon" href=None>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    }); </script>  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">	 FFaceNeRF: Few-shot Face Editing <br>in Neural Radiance Fields</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block"><a href="https://kwanyun.github.io">Kwan Yun<sup>1</sup> </a></span>
+                ,  &ensp;
+                <span class="author-block"><a href=>Chaelin Kim<sup>1</sup> </a></span>
+                <sup></sup>,  &ensp;
+              <span class="author-block">Hangyeul Shin<sup>2</sup> </a></span>
+                <sup></sup>,  &ensp;
+              <span class="author-block"><a href="https://vml.kaist.ac.kr/">Junyong Noh<sup>1</sup></a></span>
+                <sup></sup>  &ensp;
+              <br><br>
+              <span class="author-block"> <sup>1</sup>KAIST, Visual Media LAB</span> &ensp;  <sup>2</sup>Handong Global University</span><br> 
+              <br><br>
+            <div class="is-size-4 publication-authors"><strong>Accepted to CVPR 2025</div>
+            </div>
+
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a  href=""
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>Arxiv</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
+                </a>
+                </span>
+            
+                <!-- code Link -->
+                <span class="link-block">
+                  <a  href="https://github.com/kwanyun/FFaceNeRF" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- main  -->
+<section class="hero teaser">
+      <div class="hero-body ">
+    <div class="container is-max-desktop">
+      <center>
+        <img src="static/images/teaser.png" alt="Teaser" class="center-image" style="width: 100%; height: auto;"/>
+      </center>
+    </div>
+  </div>
+</section>
+<!-- End main -->
+
+
+<!-- Paper abstract -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4"> FFaceNeRF performs mask-based face editing using <br>a customized layout, trained with few-shot learning.
+        </h2><br><br>
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent 3D face editing methods using masks have produced high-quality edited images by leveraging Neural Radiance Fields (NeRF). Despite their impressive performance, existing methods often provide limited user control due to the use of pre-trained segmentation masks. To utilize masks with a desired layout, an extensive training dataset is required, which is challenging to gather. We present <strong>FFaceNeRF</strong>, a NeRF-based face editing technique that can overcome the challenge of limited user control due to the use of fixed mask layouts. Our method employs a geometry adapter with feature injection, allowing for effective manipulation of geometry attributes. Additionally, we adopt latent mixing for tri-plane augmentation, which enables training with a few samples. This facilitates rapid model adaptation to desired mask layouts, crucial for applications in fields like personalized medical imaging or creative face editing. Our comparative evaluations demonstrate that <strong>FFaceNeRF</strong> surpasses existing mask based face editing methods in terms of flexibility, control, and generated image quality, paving the way for future advancements in customized and high-fidelity 3D face editing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">FFaceNeRF Results</h2>
+      <div class="item">
+        <center>
+          <video src="static/videos/result_m.mp4" controls style="width: 80%; height: auto;"></video> 
+
+        </center>
+        <br><br><br><br>
+      </div>
+
+
+      <h2 class="title is-3">Comparisons</h2>
+      <div class="item">
+        <center>
+          <video src="static/videos/comparison_m.mp4" controls style="width: 80%; height: auto;"></video> 
+
+        </center>
+        <br><br><br><br>
+      </div>
+
+      <br><br><br><br>
+
+
+
+      <h2 class="title is-3">Application : partial style transfer</h2>
+      <div class="item">
+        <center>
+          <img src="static/images/app1.png" alt="AvatarTalk Overview" style="width: 70%; height: auto;" class="center-image blend-img-background"/>
+
+        </center>
+        <br><br><br><br>
+      </div>
+      <h2 class="title is-3">Application : adoption to DatasetGAN</h2>
+      <div class="item">
+        <center>
+          <img src="static/images/app2.png" alt="AvatarTalk Overview" style="width: 70%; height: auto;" class="center-image blend-img-background"/>
+
+        </center>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+
+<script type="text/javascript">
+var sc_project=12843789; 
+var sc_invisible=1; 
+var sc_security="e9c3bf5f"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12843789/0/e9c3bf5f/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
+
